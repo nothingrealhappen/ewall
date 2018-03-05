@@ -3,7 +3,8 @@
   "version": "0.1.0",
   "scripts": {
     "build": "bsb -make-world",
-    "start": "bsb -make-world -w",
+    "start": "sudo concurrently \"npm run watch\" \"http-server -p 80\" \"npm run webpack\"",
+    "watch": "bsb -make-world -w",
     "clean": "bsb -clean-world",
     "test": "echo \"Error: no test specified\" && exit 1",
     "webpack": "webpack -w"
@@ -14,12 +15,14 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
+    "concurrently": "^3.5.1",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
     "reason-react": ">=0.3.0"
   },
   "devDependencies": {
     "bs-platform": "^2.2.0",
+    "html-webpack-plugin": "^3.0.4",
     "webpack": "^3.8.1"
   }
 }
