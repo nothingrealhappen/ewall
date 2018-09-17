@@ -2,12 +2,11 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <title>Pure Reason Example</title>
         <meta name="google-signin-client_id" content="<%= htmlWebpackPlugin.options.googleClientId %>">
     </head>
     <body>
         <div id="index"></div>
-        <div class="g-signin2" data-onsuccess="onSignIn"></div>
+        <div class="g-signin2" data-onsuccess="googleSignIn"></div>
 
         <script src="https://apis.google.com/js/platform.js" async defer></script>
     </body>

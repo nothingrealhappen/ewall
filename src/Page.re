@@ -1,3 +1,6 @@
+/* external the google api */
+[@bs.val] external googleSignIn : float => unit = "";
+
 /* This is the basic component. */
 let component = ReasonReact.statelessComponent("Page");
 
