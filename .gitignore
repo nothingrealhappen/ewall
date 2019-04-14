@@ -6,3 +6,4 @@ npm-debug.log
 /node_modules/
 build/
 /config.js
+*.bs.js
