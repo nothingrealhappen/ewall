@@ -5,7 +5,6 @@ type frame = {
 
 type settings = {frames: list(frame)};
 
-// let testFrame: frame = {pub name = "test"; pub url = "a"};
 let localStorageNameSpace = "__ewall__";
 let defaultSettings: settings = {frames: []};
 
