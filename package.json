@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "scripts": {
     "build": "bsb -make-world",
-    "start": "bsb -make-world -w & npm run webpack & http-server ./build -c-1",
+    "start": "bsb -make-world -w & npm run webpack & http-server ./docs -c-1",
     "clean": "bsb -clean-world",
     "test": "echo \"Error: no test specified\" && exit 1",
     "webpack": "webpack -w",
