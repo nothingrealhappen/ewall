@@ -23,3 +23,15 @@ let get = (): settings =>
   | None => defaultSettings
   | Some(settings) => unsafeJsonParse(settings)
   };
+
+type action =
+  | CreateFrame(frame)
+  | DeleteFrame(frame);
+
+let reducer = (state: settings, action) =>
+  switch (action) {
+  | CreateFrame(frame) => {frames: [frame, ...state.frames]}
+  | DeleteFrame(frame) => {
+      frames: List.filter(f => f != frame, state.frames),
+    }
+  };

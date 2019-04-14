@@ -6,8 +6,12 @@ let make = () => {
   let settings = Settings.get();
 
   <>
-    <h1> {React.string("Home Page")} </h1>
-    <a href="javascript:;" onClick=goAdmin> {React.string("Go Admin")} </a>
+    <AppHeader name="" link="Admin" onLinkClick=goAdmin />
+    <p>
+      {React.string(
+         "Go to Admin page, try to add some name and url(will used by iframe src, i.e.: any website), then see the result.",
+       )}
+    </p>
     <ul>
       {settings.frames
        |> List.map((frame: Settings.frame) =>
